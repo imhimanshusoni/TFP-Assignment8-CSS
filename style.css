@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Nav Bar Starts */
+.nav-container {
+  padding: 16px 24px;
+  background-color: #00004b;
+  display: flex;
+  align-items: center;
+}
+.inside {
+  background-color: white;
+  border-radius: 0px 10px;
+  padding: 8px;
+  margin: 0 15px;
+  transition: 200ms;
+  cursor: pointer;
+  &:hover {
+    border-radius: 10px 0px;
+    outline: 2px solid blue;
+  }
+}
+input {
+  padding: 8px;
+  margin: 0 15px;
+  border-radius: 8px;
+  max-width: 400px;
+  flex-grow: 1;
+  border: none;
+  outline: none;
+}
+.profile {
+  height: 35px;
+  width: 35px;
+  background-color: #008b8b;
+  border-radius: 50%;
+  border: 2px solid gold;
+  transition: 0.2s;
+  box-sizing: border-box;
+  &:hover {
+    border: 4px dashed gold;
+  }
+}
+/* Nav Bar Ends */
+
+/* Main Section Starts */
+.content-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  padding: 0 20px;
+}
+.aside {
+  background-color: #c4bce0;
+  min-height: 100vh;
+  padding: 50px 16px 0;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  label {
+    display: block;
+    padding: 14px 16px;
+    font-weight: 600;
+    border-radius: 12px;
+  }
+  label:hover {
+    background-color: #9ea2e0;
+  }
+}
+.mobile-nav {
+  display: none;
+  color: #606060;
+  overflow: scroll;
+  /* padding-bottom: 10px; */
+  /* box-sizing: border-box; */
+}
+.mobile-nav label:hover {
+  color: #0f0f0f;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  /* border-bottom: 3px solid #0f0f0f; */
+}
+.mobile-nav label {
+  margin: 0 18px;
+  font-size: 20px;
+  padding: 10px 0;
+  text-align: center;
+}
+.inside-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  justify-content: space-evenly;
+  margin: 24px;
+}
+.inside-container .box-container {
+  background-color: #cccccc;
+  height: 200px;
+  border-radius: 16px;
+  padding: 24px;
+}
+@media (width <= 768px) {
+  .aside {
+    display: none;
+  }
+  .content-container {
+    grid-template-columns: 1fr;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+}
+/* Main Section Ends */
