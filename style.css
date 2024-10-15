@@ -81,6 +81,9 @@ input {
   text-underline-offset: 10px;
   /* border-bottom: 3px solid #0f0f0f; */
 }
+.mobile-nav::-webkit-scrollbar {
+  display: none;
+}
 .mobile-nav label {
   margin: 0 18px;
   font-size: 20px;
