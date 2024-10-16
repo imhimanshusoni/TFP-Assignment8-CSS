@@ -114,5 +114,8 @@ input {
   .mobile-nav {
     display: flex;
   }
+  input {
+    display: none;
+  }
 }
 /* Main Section Ends */
